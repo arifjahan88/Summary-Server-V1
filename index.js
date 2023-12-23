@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 const cors = require("cors");
 const summary = require("./routes/summary");
+const user = require("./routes/login");
 const db = require("./Utilities/db");
 
 //MiddleWire
@@ -20,6 +21,7 @@ db.connectToDatabase()
 
 //Routes
 app.use("/api/v1/summary", summary);
+app.use("/api/v1/getuser", user);
 
 app.get("/", (req, res) => {
   res.send("Project Running");
