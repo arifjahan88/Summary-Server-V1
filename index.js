@@ -9,7 +9,7 @@ const db = require("./Utilities/db");
 //MiddleWire
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public/image/"));
+// app.use(express.static("public/image/"));
 
 //Mongodb Connection
 db.connectToDatabase()
