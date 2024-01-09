@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 // app.use(express.static("public/image/"));
 
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/public/images", express.static(path.join(__dirname, "images")));
 
 //Mongodb Connection
 db.connectToDatabase()
