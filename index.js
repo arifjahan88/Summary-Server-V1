@@ -5,11 +5,14 @@ const cors = require("cors");
 const summary = require("./routes/summary");
 const user = require("./routes/login");
 const db = require("./Utilities/db");
+const path = require("path");
 
 //MiddleWire
 app.use(cors());
 app.use(express.json());
 // app.use(express.static("public/image/"));
+
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 //Mongodb Connection
 db.connectToDatabase()
